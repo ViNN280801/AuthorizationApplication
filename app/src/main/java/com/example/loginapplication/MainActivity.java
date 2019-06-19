@@ -9,28 +9,26 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button enterButtonMainActivity, cancelButtonMainActivity;
-    EditText editTextNameFieldMainActivity, editTextPasswordFieldMainActivity;
+    Button mEnterButtonMainActivity, mCancelButtonMainActivity;
 
-    EditText username = (EditText)findViewById(R.id.editTextNameFieldMainActivity);
-    EditText password = (EditText)findViewById(R.id.editTextPasswordFieldMainActivity);
+    EditText mEditTextUsername = findViewById(R.id.edittext_activity_main_username_field);
+    EditText mEditTextPassword = findViewById(R.id.edittext_activity_main_password_field);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        enterButtonMainActivity = (Button)findViewById(R.id.button);
-        editTextNameFieldMainActivity = (EditText)findViewById(R.id.editTextNameFieldMainActivity);
-        editTextPasswordFieldMainActivity = (EditText)findViewById(R.id.editTextPasswordFieldMainActivity);
+        mEnterButtonMainActivity = findViewById(R.id.button_activity_main_login);
+        mEditTextPassword = findViewById(R.id.edittext_activity_main_password_field);
 
-        cancelButtonMainActivity = (Button)findViewById(R.id.button2);
+        mCancelButtonMainActivity = findViewById(R.id.button_activity_main_cancel);
 
-        enterButtonMainActivity.setOnClickListener(new View.OnClickListener() {
+        mEnterButtonMainActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(editTextNameFieldMainActivity.getText().toString().equals("admin") &&
-                        editTextPasswordFieldMainActivity.getText().toString().equals("admin")) {
+                if(mEditTextUsername.getText().toString().equals("admin") &&
+                        mEditTextPassword.getText().toString().equals("admin")) {
                     Toast.makeText(getApplicationContext(),
                             "Redirecting...", Toast.LENGTH_SHORT).show();
                 }
@@ -40,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        cancelButtonMainActivity.setOnClickListener(new View.OnClickListener() {
+        mCancelButtonMainActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
@@ -49,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
-        if (username.getText().toString().equals("admin") && password.getText().toString().equals("admin")) {
+        if (mEditTextUsername.getText().toString().equals("admin") && mEditTextPassword.getText().toString().equals("admin")) {
             Toast.makeText(getApplicationContext(), "You are authorized successfully!", Toast.LENGTH_SHORT).show();
         }
         else {

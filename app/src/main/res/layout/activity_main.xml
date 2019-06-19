@@ -5,10 +5,19 @@
     android:layout_height = "match_parent"
     tools:context = ".MainActivity">
 
+    <com.vicmikhailau.maskededittext.MaskedEditText
+        android:id="@+id/maskededittext_cativity_main_for_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edittext_activity_main_surname_field"
+        android:hint="****-****-****-****"
+        android:layout_margin="40dp"
+        android:textAlignment="center"/>
+
     <TextView android:text = "Authorization"
         android:layout_width="wrap_content"
         android:layout_height = "wrap_content"
-        android:id = "@+id/textview"
+        android:id = "@+id/textview_activity_main_authorization_text"
         android:textSize = "35dp"
         android:layout_alignParentTop = "true"
         android:layout_centerHorizontal = "true" />
@@ -16,7 +25,7 @@
     <EditText
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
-        android:id = "@+id/editTextNameFieldMainActivity"
+        android:id = "@+id/edittext_activity_main_username_field"
         android:hint = "Enter Name"
         android:focusable = "true"
         android:textColorHint = "#330E06"
@@ -29,39 +38,56 @@
         />
 
     <EditText
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:id = "@+id/edittext_activity_main_surname_field"
+        android:hint = "Enter Surname"
+        android:focusable = "true"
+        android:textColorHint = "#330E06"
+        android:layout_below="@+id/edittext_activity_main_username_field"
+        android:layout_alignParentLeft = "true"
+        android:layout_alignParentStart = "true"
+        android:layout_alignParentRight = "true"
+        android:layout_alignParentEnd = "true"
+        android:layout_marginHorizontal="40dp"
+        />
+
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editTextPasswordFieldMainActivity"
-        android:layout_below="@+id/editTextNameFieldMainActivity"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/editTextNameFieldMainActivity"
+        android:id="@+id/edittext_activity_main_password_field"
+        android:layout_below="@+id/edittext_activity_main_surname_field"
         android:textColorHint="#330E06"
         android:hint="Password"
-        android:layout_marginStart="20pt" />
+        android:layout_marginHorizontal="40dp"
+        android:layout_alignParentLeft = "true"
+        android:layout_alignParentStart = "true"
+        android:layout_alignParentRight = "true"
+        android:layout_alignParentEnd = "true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="login"
-        android:id="@+id/button"
+        android:id="@+id/button_activity_main_login"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/textview"
-        android:layout_toStartOf="@+id/textview"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="100dp"/>
+        android:layout_toLeftOf="@+id/textview_activity_main_authorization_text"
+        android:layout_toStartOf="@+id/textview_activity_main_authorization_text"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="450dp"
+        android:background="@drawable/button"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cancel"
-        android:id="@+id/button2"
+        android:id="@+id/button_activity_main_cancel"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/textview"
-        android:layout_toEndOf="@+id/textview"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="100dp"/>
-
+        android:layout_toRightOf="@+id/textview_activity_main_authorization_text"
+        android:layout_toEndOf="@+id/textview_activity_main_authorization_text"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="450dp"
+        android:background="@drawable/button"/>
 </RelativeLayout>
