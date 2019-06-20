@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/switch_second_activity_hide_views"
+        android:theme="@style/styleForSwitch" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkbox_second_activity_deny_hide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:theme="@style/styleForCheckbox"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radiogroup_second_activity_choose_text"
+        >
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiobutton_second_activity_random_text"
+            android:text="@string/radiobutton_second_activity_random_text"
+            android:theme="@style/styleForRadioButton"/>
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiobutton_second_activity_advertisement_text"
+            android:text="@string/radiobutton_second_activity_advertisement_text"
+            android:checked="true"/>
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiobutton_second_activity_lol_text"
+            android:text="@string/radiobutton_second_activity_lol_text"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview_second_activity_hint"
+        android:textColor="@color/blue_color"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/blue_color"
+        android:hint="@string/textview_second_activity_hint"/>
+
+    <ImageView
+        android:id="@+id/imageview_second_activity_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"/>
+</LinearLayout>

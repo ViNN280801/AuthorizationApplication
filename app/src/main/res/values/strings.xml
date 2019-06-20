@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">LoginApplication</string>
+
+
+    <string name="radiobutton_second_activity_random_text">Just a text</string>
+    <string name="radiobutton_second_activity_advertisement_text">Your advertisement may be here :(</string>
+    <string name="radiobutton_second_activity_lol_text">lol</string>
+
+    <string name="textview_second_activity_hint">There should be a hint!</string>
 </resources>
