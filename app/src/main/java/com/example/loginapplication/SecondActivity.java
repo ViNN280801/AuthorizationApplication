@@ -8,20 +8,26 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import static android.text.InputType.TYPE_CLASS_NUMBER;
+import static android.text.InputType.TYPE_CLASS_TEXT;
+
 public class SecondActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener,
         SecondActivityContract.View,
         RadioGroup.OnCheckedChangeListener {
 
-    Switch mVisibilitySwitch;
+    Switch mVisibilitySwitch, mChangeInputTypeForEditTextSwitch;
     CheckBox mCheckBoxText;
     RadioGroup mRadioGroup;
     TextView mTextView;
+
+    EditText mEditTextForChangeInputType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -91,19 +97,30 @@ public class SecondActivity extends AppCompatActivity implements CompoundButton.
             case R.id.checkbox_second_activity_deny_hide:
                 break;
         }
+
+        mEditTextForChangeInputType = findViewById(R.id.edittext_second_activity_text_for_change);
+
+        switch (compoundButton.getId()) {
+            case R.id.switch_second_activity_change_input_type:
+                if (mEditTextForChangeInputType.getText().equals(" ") || mEditTextForChangeInputType.getText().equals(null)) {
+                    mEditTextForChangeInputType.setText(" ");
+                    if (booleanState)
+                        mEditTextForChangeInputType.setInputType(TYPE_CLASS_NUMBER);
+                    else mEditTextForChangeInputType.setInputType(TYPE_CLASS_TEXT);
+                }
+        }
     }
 
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
         switch(checkedId){
             case R.id.radiobutton_second_activity_random_text:
-                mTextView.setText(R.string.radiobutton_second_activity_random_text);
+                Intent transitionToAuthorization = new Intent(this, MainActivity.class);
+                startActivity(transitionToAuthorization);
                 break;
             case R.id.radiobutton_second_activity_advertisement_text:
-                mTextView.setText(R.string.radiobutton_second_activity_advertisement_text);
-                break;
-            case R.id.radiobutton_second_activity_lol_text:
-                mTextView.setText(R.string.radiobutton_second_activity_lol_text);
+                Intent transitionToImageActivity = new Intent(this, MainActivity.class);
+                startActivity(transitionToImageActivity);
                 break;
         }
     }

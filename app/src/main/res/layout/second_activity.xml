@@ -38,13 +38,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/radiobutton_second_activity_advertisement_text"
-            android:text="@string/radiobutton_second_activity_advertisement_text"
-            android:checked="true"/>
-        <androidx.appcompat.widget.AppCompatRadioButton
+            android:text="@string/radiobutton_second_activity_advertisement_text"/>
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radiobutton_second_activity_lol_text"
-            android:text="@string/radiobutton_second_activity_lol_text"/>
+            android:text="sign in"
+            android:id="@+id/button_second_activity_sign_in"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/button"/>
     </RadioGroup>
 
     <TextView
@@ -63,4 +65,19 @@
         android:src="@drawable/ic_launcher_background"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch_second_activity_change_input_type"
+        android:theme="@style/styleForSwitch"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edittext_second_activity_text_for_change"
+        android:inputType=""
+        android:hint="@string/textview_second_activity_hint"
+        android:layout_marginTop="20dp"/>
 </LinearLayout>

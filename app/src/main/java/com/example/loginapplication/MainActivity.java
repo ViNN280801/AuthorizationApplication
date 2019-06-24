@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     EditText mMaskedEditTextMainActivity = findViewById(R.id.maskededittext_activity_main_for_test);
 
-    View.OnClickListener mchangeMaskButtonMainActivityListener = new View.OnClickListener() {
+    View.OnClickListener mChangeMaskButtonMainActivityListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             switch (R.id.button_activity_main_change_mask){
@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
         mEnterButtonMainActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mEditTextUsername.getText().toString().equals("admin") &&
-                        mEditTextPassword.getText().toString().equals("admin")) {
+                if(mEditTextUsername.getText().toString().equals("icarus") &&
+                        mEditTextPassword.getText().toString().equals("qwerty123")) {
                     Toast.makeText(getApplicationContext(),
                             "Redirecting...", Toast.LENGTH_SHORT).show();
                 }
@@ -70,6 +70,4 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Login or password is wrong!", Toast.LENGTH_SHORT).show();
         }
     }
-
-
 }

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkbox_image_activity_change_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/checkbox_image_activity_change_color"
+        android:theme="@style/styleForCheckbox"
+        android:layout_marginHorizontal="20dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkbox_image_activity_change_scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/checkbox_image_activity_change_scale"
+        android:theme="@style/styleForCheckbox"
+        android:layout_marginHorizontal="20dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkbox_image_activity_change_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/checkbox_image_activity_change_image"
+        android:theme="@style/styleForCheckbox"
+        android:layout_marginHorizontal="20dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_image_activity_confirm_changes"
+        android:background="@drawable/button"
+        android:layout_marginHorizontal="20dp"
+        android:text="@string/button_image_activity_confirm_changes"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageview_image_activity_image_to_modify"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="50dp"
+        android:scaleType="matrix"
+        />
+</LinearLayout>

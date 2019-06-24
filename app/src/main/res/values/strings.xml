@@ -2,9 +2,13 @@
     <string name="app_name">LoginApplication</string>
 
 
-    <string name="radiobutton_second_activity_random_text">Just a text</string>
-    <string name="radiobutton_second_activity_advertisement_text">Your advertisement may be here :(</string>
-    <string name="radiobutton_second_activity_lol_text">lol</string>
+    <string name="radiobutton_second_activity_random_text">Sign in</string>
+    <string name="radiobutton_second_activity_advertisement_text">Transition to image activity</string>
 
     <string name="textview_second_activity_hint">There should be a hint!</string>
+
+    <string name="checkbox_image_activity_change_color">Change color of image</string>
+    <string name="checkbox_image_activity_change_scale">Change scale of image</string>
+    <string name="checkbox_image_activity_change_image">Change image</string>
+    <string name="button_image_activity_confirm_changes">Confirm</string>
 </resources>
