@@ -1,6 +1,8 @@
 package com.example.loginapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -104,5 +106,9 @@ public class SecondActivity extends AppCompatActivity implements CompoundButton.
                 mTextView.setText(R.string.radiobutton_second_activity_lol_text);
                 break;
         }
+    }
+
+    public void onClickPhoto(View view) {
+        Intent mIntentForCameraAccess = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
     }
 }

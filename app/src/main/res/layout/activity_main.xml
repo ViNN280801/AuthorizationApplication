@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
-    xmlns:tools = "http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height = "match_parent"
-    tools:context = ".MainActivity">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
 
     <com.vicmikhailau.maskededittext.MaskedEditText
-        android:id="@+id/maskededittext_cativity_main_for_test"
+        android:id="@+id/maskededittext_activity_main_for_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edittext_activity_main_surname_field"
-        android:hint="****-****-****-****"
+        android:hint="+7 (***) ***-**-**"
         android:layout_margin="40dp"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        app:mask="+7 (***) ***-**-**"/>
 
     <TextView android:text = "Authorization"
         android:layout_width="wrap_content"
@@ -76,7 +78,7 @@
         android:layout_toLeftOf="@+id/textview_activity_main_authorization_text"
         android:layout_toStartOf="@+id/textview_activity_main_authorization_text"
         android:layout_marginStart="30dp"
-        android:layout_marginBottom="450dp"
+        android:layout_marginBottom="300dp"
         android:background="@drawable/button"/>
 
     <Button
@@ -88,6 +90,15 @@
         android:layout_toRightOf="@+id/textview_activity_main_authorization_text"
         android:layout_toEndOf="@+id/textview_activity_main_authorization_text"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="450dp"
+        android:layout_marginBottom="300dp"
         android:background="@drawable/button"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_activity_main_change_mask"
+        android:layout_marginTop="350dp"
+        android:text="Change mask"
+        android:background="@drawable/button"
+        android:layout_marginStart="300dp" />
 </RelativeLayout>

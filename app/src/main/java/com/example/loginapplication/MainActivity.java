@@ -1,6 +1,7 @@
 package com.example.loginapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 
@@ -9,7 +10,22 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button mEnterButtonMainActivity, mCancelButtonMainActivity;
+    EditText mMaskedEditTextMainActivity = findViewById(R.id.maskededittext_activity_main_for_test);
+
+    View.OnClickListener mchangeMaskButtonMainActivityListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            switch (R.id.button_activity_main_change_mask){
+                case (0):
+                    mMaskedEditTextMainActivity.setText("****-****-****-****");
+                    break;
+                case(1):
+                    mMaskedEditTextMainActivity.setText("+7 (***) ***-**-**");
+                    break;
+            }
+        }
+    };
+    Button mEnterButtonMainActivity, mCancelButtonMainActivity, mChangeMaskMainActivity;
 
     EditText mEditTextUsername = findViewById(R.id.edittext_activity_main_username_field);
     EditText mEditTextPassword = findViewById(R.id.edittext_activity_main_password_field);
@@ -54,4 +70,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Login or password is wrong!", Toast.LENGTH_SHORT).show();
         }
     }
+
+
 }
