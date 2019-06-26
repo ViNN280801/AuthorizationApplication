@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import entities.UserEntity;
@@ -57,6 +59,12 @@ public class UsersListActivity extends AppCompatActivity implements UserActivity
             userEntity.setCountry("USA");
 
             mArrayListUsers.add(userEntity);
+
+            if(i % 10 == 0){
+                userEntity.setName("");
+                userEntity.setBannerImage("https://2.imimg.com/data2/IS/TN/MY-2561564/advertisement-designing-services-500x500.jpg");
+                userEntity.setBannerTitle("The angus third pounder... get yours today!");
+            }
         }
     }
 }

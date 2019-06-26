@@ -2,14 +2,16 @@ package entities;
 
 public class UserEntity {
 
-
-    private String surname;
-    private int mark;
-    private int GPA;
-    private String Faculty;
-    private String University;
-    private String Address;
-    private String Country;
+    private String name = "";
+    private String surname = "";
+    private int mark = 0;
+    private int GPA = 0;
+    private String Faculty = "";
+    private String University = "";
+    private String Address = "";
+    private String Country = "";
+    private String bannerImage = "";
+    private String BannerTitle = "";
 
     public String getName() {
         return name;
@@ -75,8 +77,6 @@ public class UserEntity {
         Country = country;
     }
 
-    private String name;
-
     @Override
     public String toString() {
         return "UserEntity{" +
@@ -89,5 +89,21 @@ public class UserEntity {
                 ", Address='" + Address + '\'' +
                 ", Country='" + Country + '\'' +
                 '}';
+    }
+
+    public String getBannerImage() {
+        return bannerImage;
+    }
+
+    public void setBannerImage(String bannerImage) {
+        this.bannerImage = bannerImage;
+    }
+
+    public String getBannerTitle() {
+        return BannerTitle;
+    }
+
+    public void setBannerTitle(String bannerTitle) {
+        BannerTitle = bannerTitle;
     }
 }
